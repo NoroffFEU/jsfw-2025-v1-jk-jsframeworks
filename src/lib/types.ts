@@ -17,7 +17,7 @@ export type Product = {
   reviews: Review[];
 };
 
-export type Cartitem = {
+export type CartItem = {
   product: Product;
   quantity: number;
 };
