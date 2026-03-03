@@ -32,11 +32,11 @@ export default function ProductCard({ product }: Props) {
         />
       </div>
       <div className="mt-3 space-y-1">
-        <h3 className="line-clamp-1 font-medium">{product.title}</h3>
+        <h3 className="line-clamp-1 font-medium text-black">{product.title}</h3>
         <div className="flex items-center gap-2">
           {hasDiscount ? (
             <>
-              <span className="font-semibold">
+              <span className="font-semibold text-black">
                 {formatPrice(product.discountedPrice)}
               </span>
               <span className="text-sm text-gray-500 line-through">
@@ -44,7 +44,9 @@ export default function ProductCard({ product }: Props) {
               </span>
             </>
           ) : (
-            <span className="font-semibold">{formatPrice(product.price)}</span>
+            <span className="font-semibold text-black">
+              {formatPrice(product.price)}
+            </span>
           )}
         </div>
         <div className="text-sm text-gray-600">Rating: {product.rating}</div>
