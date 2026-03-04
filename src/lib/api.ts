@@ -18,6 +18,9 @@ export async function fetchProducts(): Promise<Product[]> {
 
 // fetch single product with id
 export async function fetchProduct(id: string): Promise<Product> {
+  console.log('BASE_URL:', BASE_URL);
+  console.log('ID:', id);
+
   const res = await fetch(`${BASE_URL}/online-shop/${id}`, {
     cache: 'no-store',
   });
