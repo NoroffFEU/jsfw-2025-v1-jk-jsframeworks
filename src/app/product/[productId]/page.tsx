@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { fetchProduct } from '@/lib/api';
 import { formatPrice } from '@/lib/utils';
+import AddToCartButton from '@/components/AddToCartButton';
 
 export default async function ProductPage({
   params,
@@ -43,9 +44,7 @@ export default async function ProductPage({
             )}
           </div>
           <div className="text-sm text-gray-600">Rating: {product.rating}</div>
-          <button className="mt-2 rounded-md bg-black px-4 py-2 text-white hover:opacity-90">
-            Add to Cart
-          </button>
+          <AddToCartButton product={product} />
         </div>
       </div>
       <section className="mt-10">
