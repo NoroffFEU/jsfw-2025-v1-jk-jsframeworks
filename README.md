@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Online Shop – React & Next.js
 
-## Getting Started
+This project is a fully functional online shop built with Next.js (React) and TypeScript. The application fetches products from a REST API and allows users to browse products, view detailed information, search and sort products, manage a shopping cart, complete a checkout flow, and send messages through a validated contact form.
 
-First, run the development server:
+The application is responsive and works across desktop, tablet, and mobile devices.
+
+## Features
+
+### Product Listing
+
+- Fetches products from the API endpoint:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+GET /online-shop
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Displays products in a responsive grid layout.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Each product card includes:
+  - Product image
+  - Title
+  - Rating
+  - Price
+  - Discounted price (if available)
+  - Discount badge showing percentage.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Product Details Page
 
-## Learn More
+- Clicking a product navigates to a detailed product page.
 
-To learn more about Next.js, take a look at the following resources:
+- Fetches data from:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+GET /online-shop/<id>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Displays:
+  - Product image
+  - Title
+  - Description
+  - Original price and discounted price
+  - Rating
+  - Reviews
+  - Includes an Add to Cart button.0
 
-## Deploy on Vercel
+### Search Functionality
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Users can search for products from the homepage.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Matching products appear dynamically in a dropdown list.
+
+- Clicking a search result navigates directly to the product page.
+
+### Sorting
+
+- Products can be sorted by:
+  - Price (low → high)
+  - Price (high → low)
+  - Rating
+  - Title
+
+### Shopping Cart
+
+- The cart system allows users to:
+  - Add products to the cart
+  - View cart item count in the header
+  - Adjust product quantities
+  - Remove items from the cart
+  - See the total cost update dynamically.
