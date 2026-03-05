@@ -67,3 +67,128 @@ GET /online-shop/<id>
   - Adjust product quantities
   - Remove items from the cart
   - See the total cost update dynamically.
+
+### Checkout Flow
+
+- Users can proceed to checkout from the cart page.
+
+- After checkout:
+  - A success page is shown
+  - The cart is cleared.
+
+### Contact Form
+
+The contact page includes a validated form built with TypeScript.
+
+- Validation rules:
+  - Full Name – minimum 3 characters
+  - Subject – minimum 3 characters
+  - Email – must be a valid email format
+  - Message – minimum 10 characters
+
+- Features:
+  - Inline validation error messages
+  - Form reset after successful submission
+  - Success message displayed after submission.
+
+### Tech Stack
+
+- Framework: Next.js (React)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- State Management: React Context API
+- API: Noroff Online Shop API
+- Deployment: Vercel
+
+### Project Structure
+
+```bash
+src
+ ├── app
+ │   ├── product
+ │   │   └── [productId]
+ │   │       └── page.tsx
+ │   ├── cart
+ │   ├── checkout
+ │   ├── contact
+ │   ├── layout.tsx
+ │   └── page.tsx
+ │
+ ├── components
+ │   ├── Header.tsx
+ │   ├── ProductCard.tsx
+ │   └── SearchBar.tsx
+ │
+ ├── context
+ │   └── CartContext.tsx
+ │
+ ├── lib
+ │   ├── api.ts
+ │   ├── types.ts
+ │   └── utils.ts
+```
+
+### Getting Started
+
+1. Clone the repo
+
+```bash
+git clone <your-repository-url>
+cd project-name
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Environment Variables
+
+Create a ".env.local" file in the root of the project.
+
+```bash
+NEXT_PUBLIC_API_BASE_URL=https://api.noroff.dev/api/v1
+```
+
+4. Run the development server
+
+```bash
+npm run dev
+```
+
+Open:
+
+```bash
+http://localhost:3000
+```
+
+### Deployment
+
+The project can be deployed using Vercel.
+
+Steps:
+
+1. Push the project to GitHub.
+2. Import the repo into Vercel.
+3. Add the environment variable:
+
+```bash
+NEXT_PUBLIC_API_BASE_URL=https://api.noroff.dev/api/v1
+```
+
+4. Deploy.
+
+### API
+
+This project uses the Noroff Online Shop API.
+
+Endpoints used:
+
+```bash
+GET /online-shop
+GET /online-shop/<id>
+```
+
+Documentation:
+[f.dev/](https://docs.noroff.dev/)
